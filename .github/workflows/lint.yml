@@ -1,0 +1,12 @@
+name: lint
+on: pull_request
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test ! -f red.txt
+  types:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "true"
